@@ -1,7 +1,7 @@
 # docker run -it --rm --gpus all -p 8888:8888 -v C:/Repositories/School/Semester3/CECS_550/FinalProject:/tf tensorflow/tensorflow:latest-gpu-jupyter
 # docker run -it --rm --gpus=all -p 8888:8888 -v C:/Repositories/School/Semester3/CECS_550/FinalProject:/tf my_tf_image
 
-version: "3.8"
+# version: "3.8"
 services:
   my_tf_service:
     build: .
@@ -13,6 +13,8 @@ services:
     command: ["jupyter", "notebook", "--ip='*'", "--port=8888", "--no-browser", "--allow-root"]
     deploy:
       resources:
+        limits:
+          memory: 50G
         reservations:
           devices:
             - driver: nvidia
