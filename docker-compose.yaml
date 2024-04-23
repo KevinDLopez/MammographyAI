@@ -9,7 +9,7 @@ services:
     ports:
       - "8888:8888"
     volumes:
-      - C:/Repositories/School/Semester3/CECS_550/FinalProject/:/tf
+      - .:/tf
     command: ["jupyter", "notebook", "--ip='*'", "--port=8888", "--no-browser", "--allow-root"]
     deploy:
       resources:
