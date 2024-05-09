@@ -1,0 +1,3 @@
+[submodule "doc/paper_latex"]
+	path = doc/paper_latex
+	url = https://github.com/KevinDLopez/MammogramsResearchPaper.git
