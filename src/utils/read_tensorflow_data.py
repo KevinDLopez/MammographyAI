@@ -17,12 +17,12 @@ def read_tf_data(file: str, storing_dict: data_type):
         )
 
     # Extract the data
-    with tf.device("/CPU:0"):  # else is filled with GPU memory
+    with tf.device("/CPU:0"):  # else is filled with GPU memory # type: ignore
         raw_data = tf.data.TFRecordDataset([file])
         parsed_dataset = raw_data.map(parse_function)
 
     for element in parsed_dataset:
-        with tf.device("/CPU:0"):  # else is filled with GPU memory
+        with tf.device("/CPU:0"):  # else is filled with GPU memory # type: ignore
             image = tf.io.decode_raw(
                 element["image"], tf.uint8
             )  # shape = (89401,0) - 299*299 = 89401
@@ -39,13 +39,13 @@ def create_tf_dataset(data_dict):
             yield d, l
 
     # Convert the data to TensorFlow Datasets
-    with tf.device("/CPU:0"):  # else is filled with GPU memory
+    with tf.device("/CPU:0"):  # else is filled with GPU memory # type: ignore
         dataset = tf.data.Dataset.from_generator(
             generator,
             args=[data_dict["data"], data_dict["label"]],
             output_signature=(
                 tf.TensorSpec(shape=(299, 299, 1), dtype=tf.uint8),  # type: ignore
-                tf.TensorSpec(shape=(), dtype=tf.uint8), # type: ignore
+                tf.TensorSpec(shape=(), dtype=tf.uint8),  # type: ignore
             ),
         )
         dataset = dataset.shuffle(buffer_size=512)
