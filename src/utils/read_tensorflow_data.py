@@ -33,7 +33,7 @@ def read_tf_data(file: str, storing_dict: data_type):
 
 
 # allocating the data to the memory, with a small batch size. Previously the training was not happening.
-def create_tf_dataset(data_dict, batch_size):
+def create_tf_dataset(data_dict):
     def generator(data, labels):
         for d, l in zip(data, labels):
             yield d, l
@@ -48,6 +48,6 @@ def create_tf_dataset(data_dict, batch_size):
                 tf.TensorSpec(shape=(), dtype=tf.uint8), # type: ignore
             ),
         )
-        dataset = dataset.shuffle(buffer_size=1024).batch(batch_size)
+        dataset = dataset.shuffle(buffer_size=512)
 
     return dataset
