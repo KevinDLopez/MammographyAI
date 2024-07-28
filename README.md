@@ -1,4 +1,9 @@
-# MammographyAI## Project Summary
+# MammographyAI
+
+<a href="https://colab.research.google.com/github/KevinDLopez/MammographyAI/blob/main/src/GoogLetNetV3.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
+
+<a href="https://colab.research.google.com/github/KevinDLopez/MammographyAI/blob/main/src/GoogLetNetV1.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
+
 
 This project focuses on healthcare cancer detection, emphasizing the importance of early and accurate detection of malignant cases. 
 The primary metric for evaluation is recall, as it is crucial to always catch cancer when it is present. Precision, loss, and accuracy are also recorded but are secondary to recall.
@@ -22,16 +27,11 @@ The primary metric for evaluation is recall, as it is crucial to always catch ca
 
 ### Training Performance
 The following graph illustrates the training performance of the InceptionV1 model, showing the trends in loss, recall, precision, and accuracy over the training epochs.
-<div style="display: flex; justify-content: space-around;">
-  <div style="text-align: center;">
-    <h5>InceptionV1 Training Graphs</h5>
-    <img src="doc/InceptionV1_training_graphs.png" alt="InceptionV1 Training Graphs" style="max-width: 100%;">
-  </div>
-  <div style="text-align: center;">
-    <h5>InceptionV3 Training Graphs</h5>
-    <img src="doc/InceptionV3_training_graphs.png" alt="InceptionV3 Training Graphs" style="max-width: 100%;">
-  </div>
-</div>
+## Training Performance
+
+| InceptionV1 Training Graphs | InceptionV3 Training Graphs |
+|:---------------------------:|:---------------------------:|
+| ![InceptionV1 Training Graphs](doc/InceptionV1_training_graphs.png) | ![InceptionV3 Training Graphs](doc/InceptionV3_training_graphs.png) |
 
 
 ### Conclusion
