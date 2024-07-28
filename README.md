@@ -1,9 +1,9 @@
 # MammographyAI
+## Open in Google Colab
 
-<a href="https://colab.research.google.com/github/KevinDLopez/MammographyAI/blob/main/src/GoogLetNetV3.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
-
-<a href="https://colab.research.google.com/github/KevinDLopez/MammographyAI/blob/main/src/GoogLetNetV1.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
-
+| InceptionV1 Notebook | InceptionV3 Notebook |
+|:---------------------:|:---------------------:|
+| <a href="https://colab.research.google.com/github/KevinDLopez/MammographyAI/blob/main/src/GoogLetNetV1.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a> | <a href="https://colab.research.google.com/github/KevinDLopez/MammographyAI/blob/main/src/GoogLetNetV3.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a> |
 
 This project focuses on healthcare cancer detection, emphasizing the importance of early and accurate detection of malignant cases. 
 The primary metric for evaluation is recall, as it is crucial to always catch cancer when it is present. Precision, loss, and accuracy are also recorded but are secondary to recall.
